@@ -1,5 +1,5 @@
-### Copy this file into pull_alerts.py in from https://github.com/lyft/opsreview
-### To include low_urgency call it like this: python pull_alerts.py --include-low
+# Copy this file into pull_alerts.py in from https://github.com/lyft/opsreview
+# To include low_urgency call it like this: python pull_alerts.py --include-low
 
 from __future__ import (absolute_import, division, print_function,
                         unicode_literals)
@@ -155,7 +155,10 @@ def print_stats(high_urg_incidents, low_urg_incidents):
 | Transient (#t)       | {:12} | {:11} |
 | Not Tagged           | {:12} | {:11} |
 | TOTAL                | {:12} | {:11} |
-""".format(formatted_start, formatted_end, h_a, l_a, h_na, l_na, h_t, l_t, h_nt, l_nt, len(high_urg_incidents), len(low_urg_incidents)))
+""".format(
+        formatted_start, formatted_end, h_a, l_a, h_na, l_na, h_t, l_t, h_nt, l_nt,
+        len(high_urg_incidents), len(low_urg_incidents)
+    ))
 
 
 def get_breakdown(incidents):
